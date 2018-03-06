@@ -1,0 +1,12 @@
+{{define "reportsListPage"}}
+{{template "header"}}
+<h2>Reports</h2>
+<ul class="reportList">
+    {{.}}
+    {{range .}}
+            <li><h2><a href="#{{.Name}}">{{.Name}}</a></h2><p>Location: {{.Location}}</p></li>{{.}}
+    {{end}}
+</ul>
+{{template "footer"}}
+{{end}}
+
