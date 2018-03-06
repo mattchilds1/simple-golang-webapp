@@ -4,10 +4,7 @@ import (
     "net/http"
     "log"
     "html/template"
-    "fmt"
-    "strings"
 
-    "github.com/gorilla/mux"
     "gopkg.in/mgo.v2/bson"
 )
 
@@ -17,8 +14,8 @@ var (
 
 type Report struct {
     ID      bson.ObjectId `bson:"_id,omitempty"`
-    Name     string  `json:"Username,omitempty" bson:"Name,omitempty"`
-	Location     string  `json:"Location,omitempty" bson:"Location,omitempty"`
+    Name     string  `json:"Name,omitempty" bson:"Name,omitempty"`
+	  Location     string  `json:"Location,omitempty" bson:"Location,omitempty"`
 }
 
 type ReportDatabase interface {
@@ -41,9 +38,8 @@ func reportListPage(w http.ResponseWriter, r *http.Request) {
   		log.Print(err, "could not list reports: %v", err)
   	}
     log.Print("Reports: ", reports)
-    err2 := templates.ExecuteTemplate(w, "reportListPage", reports)
+    err2 := templates.ExecuteTemplate(w, "reportsListPage", reports)
     if err != nil {
       log.Print("template error: ", err2)
     }
 }
-

@@ -24,8 +24,7 @@ func main() {
   r := mux.NewRouter()
 
   r.HandleFunc("/", indexPage)
-  r.HandleFunc("/reports", reportsPage)
+  r.HandleFunc("/reports/", reportListPage)
 
   log.Fatal(http.ListenAndServe(":8080", r))
 }
-
