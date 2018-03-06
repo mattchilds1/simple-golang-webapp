@@ -23,7 +23,7 @@ func newMongoDB(addr string) (ReportDatabase, error) {
 
 	return &mongoDB{
 		conn: conn,
-		c:    conn.DB("yoga").C("teacher"),
+		c:    conn.DB("reports").C("report"),
 	}, nil
 }
 
@@ -40,6 +40,3 @@ func (db *mongoDB) ListReports() ([]*Report, error) {
   log.Print(result[0].Name)
   return result, nil
 }
-
-
-
