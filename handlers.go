@@ -23,7 +23,7 @@ type ReportDatabase interface {
     Close()
 }
 
-var templates = template.Must(template.ParseGlob("./templates/*"))
+var templates = template.Must(template.ParseGlob("templates/*"))
 
 func indexPage(w http.ResponseWriter, r *http.Request) {
   err := templates.ExecuteTemplate(w, "indexPage", nil)
