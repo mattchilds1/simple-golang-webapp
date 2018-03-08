@@ -4,6 +4,7 @@ import (
     "net/http"
     "log"
     "os"
+    "fmt"
 
     "github.com/gorilla/mux"
 )
@@ -14,7 +15,7 @@ func init() {
   // var cred *mgo.Credential - for use with credentials
   // DB, err = newMongoDB("localhost", cred)
   DB, err = newMongoDB(os.Getenv("DB_URL"))  // "localhost"
-
+  fmt.Println("DB URL:", os.Getenv("DB_URL"))
   if err != nil {
   log.Fatal(err)
   }
