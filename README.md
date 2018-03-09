@@ -15,6 +15,16 @@ Also ensure go is properly installed and configured (e.g. $GOPATH etc) on your m
 
 ## Usage
 
+### Database
+You will need to have mongodb running on your machine and have imported the database/collection in reports.dataset.json in this repository.
+
+With mongodb running, import the datset with the following command:
+
+```bash
+mongoimport -d reports2 -c report --file reports-dataset.json
+```
+
+### Application
 1. Get dependencies
 ```Golang
 go get
