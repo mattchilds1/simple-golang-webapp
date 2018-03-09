@@ -39,3 +39,9 @@ go build
 ```bash
 ./simple-golang-webapp
 ```
+
+
+## Related
+
+Terraform & Ansible repository for deploying this application Amazon Web Services
+https://github.com/nmarchini/tf-01
