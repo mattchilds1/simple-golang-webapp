@@ -2,9 +2,8 @@
 {{template "header"}}
 <h2>Reports</h2>
 <ul class="reportList">
-    {{.}}
     {{range .}}
-            <li><h2><a href="/assets/tps-report.png">{{.Name}}</a></h2><p>Prepared by: {{.PreparedBy}}</p><p>System: {{.System}}</p><p>Programming Language: {{.ProgramLanguage}}</p> <p>Operating System: {{.OS}}</p> <p>Comments: {{.Comments}}</p></li>{{.}}
+            <li><h2><a href="/assets/tps-report.png">{{.Name}}</a></h2><p>Prepared by: {{.PreparedBy}}</p><p>System: {{.System}}</p><p>Programming Language: {{.ProgramLanguage}}</p> <p>Operating System: {{.OS}}</p> <p>Comments: {{.Comments}}</p></li>
     {{end}}
 </ul>
 {{template "footer"}}
