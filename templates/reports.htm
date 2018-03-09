@@ -4,9 +4,8 @@
 <ul class="reportList">
     {{.}}
     {{range .}}
-            <li><h2><a href="#{{.Name}}">{{.Name}}</a></h2><p>Location: {{.Location}}</p></li>{{.}}
+            <li><h2><a href="/assets/tps-report.png">{{.Name}}</a></h2><p>Prepared by: {{.PreparedBy}}</p><p>System: {{.System}}</p><p>Programming Language: {{.ProgramLanguage}}</p> <p>Operating System: {{.OS}}</p> <p>Comments: {{.Comments}}</p></li>{{.}}
     {{end}}
 </ul>
 {{template "footer"}}
 {{end}}
-

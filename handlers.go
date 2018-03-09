@@ -15,7 +15,11 @@ var (
 type Report struct {
     ID      bson.ObjectId `bson:"_id,omitempty"`
     Name     string  `json:"Name,omitempty" bson:"Name,omitempty"`
-	  Location     string  `json:"Location,omitempty" bson:"Location,omitempty"`
+	  PreparedBy     string  `json:"PreparedBy,omitempty" bson:"PreparedBy,omitempty"`
+    System     string  `json:"System,omitempty" bson:"System,omitempty"`
+    ProgramLanguage     string  `json:"ProgramLanguage,omitempty" bson:"ProgramLanguage,omitempty"`
+    OS     string  `json:"OS,omitempty" bson:"OS,omitempty"`
+    Comments     string  `json:"Comments,omitempty" bson:"Comments,omitempty"`
 }
 
 type ReportDatabase interface {

@@ -1,0 +1,44 @@
+body {
+  font-family: 'proxima-nova', sans-serif;
+}
+
+#logo {
+  width: 300px;
+  float: left;
+  margin-bottom: 3em;
+}
+
+h1 {
+  float: left;
+  margin-top: 2em;
+}
+
+
+nav {
+  clear: both;
+
+}
+
+nav ul {
+  list-style-type: none;
+  margin-left: 0.6em;
+}
+
+nav ul li {
+  display: inline;
+  background-color: lightgrey;
+  padding: 1em;
+  margin-right: 0.5em;
+}
+
+nav ul li a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+main {
+  padding: 2em;
+  padding-left: 3em;
+}
